@@ -17,28 +17,28 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 Rode:
-´´´
+```
 git clone url-deste-projeto
-´´´
+```
 
-´´´
+```
 pip install -r requirements.txt
-´´´
+```
 
 
 ### Installing
 Na pasta raiz (onde está o manage.py):
-´´´
+```
 python manage.py makemigrations 
-´´´
+```
 
-´´´
+```
 python manage.py migrate 
-´´´
+```
 
-´´´
+```
 python manage.py runserver 
-´´´
+```
 
 ## Usage <a name = "usage"></a>
 
