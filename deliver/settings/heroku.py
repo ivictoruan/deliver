@@ -1,6 +1,6 @@
 import environ
 
-from deliver.settings.base import *
+from deliver.settings import *
 
 env = environ.Env()
 
