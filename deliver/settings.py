@@ -72,14 +72,25 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'db_deliver',
+    #     'USER': 'root',
+    #     'PASSWORD': '$1234', # mudar para senha ao colocar em produção!
+    #     'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+    #     'PORT': '3306',
+    # }
+    
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_deliver',
-        'USER': 'root',
-        'PASSWORD': '$1234', # mudar para senha ao colocar em produção! 
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db_delivery',
+        'USER': 'postgres',
+        'PASSWORD': '$1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'CONN_MAX_AGE': 500, #Constantly opening new connections is an expensive operation,
+    },
+    
 }
 
 
@@ -124,4 +135,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True # django-cors-header
+CORS_ALLOW_ALL_ORIGINS = True  # django-cors-header
