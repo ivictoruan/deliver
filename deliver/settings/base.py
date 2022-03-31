@@ -71,20 +71,11 @@ WSGI_APPLICATION = 'deliver.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
+    # 'default': { # BANCO DE DADOS NATIVO (SQLITE)
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'db_deliver',
-    #     'USER': 'root',
-    #     'PASSWORD': '$1234', # mudar para senha ao colocar em produção!
-    #     'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-    #     'PORT': '3306',
-    # }
-    
-    'default': {
+    # }  
+    'default': { # BANCO DE DADOS NOVO (POSTGRES)
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'db_delivery',
         'USER': 'postgres',
@@ -92,8 +83,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
         'CONN_MAX_AGE': 500, #Constantly opening new connections is an expensive operation,
-    },
-    
+    }, 
 }
 
 
